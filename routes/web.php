@@ -19,3 +19,4 @@ Route::get('video/add','Video\VideoController@add');
 
 
 Route::get('weather/weather','Video\VideoController@weather');
+Route::get('/cron','Cron\CronController@cron');
