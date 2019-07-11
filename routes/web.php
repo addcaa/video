@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('video/index','Video\VideoController@index');
-
+Route::get('video/details','Video\VideoController@details');
 
 Route::get('weather/weather','Video\VideoController@weather');
 Route::get('/cron','Cron\CronController@cron');

@@ -5,11 +5,21 @@ namespace App\Http\Controllers\Video;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use OSS\OssClient;
+use Illuminate\Support\Facades\DB;
 class VideoController extends Controller
 {
 
     public function index(){
+        $arr=DB::table('p_videos')->get();
+        return view('video.index',['arr'=>$arr]);
+    }
 
+    public function details(){
+        $where=[
+            'vid'=>$_GET['vid']
+        ];
+        $info=DB::table('p_videos')->where($where)->first();
+        return view('video.details',['info'=>$info]);
     }
 
 
