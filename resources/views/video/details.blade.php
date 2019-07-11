@@ -10,7 +10,7 @@
 <body>
     <h2>{{$info->title}}</h2>
     <video width="80%" height="80%" controls>
-        <source src="/storage/{{$info->path}}" type="video/mp4">
+        <source src="/{{env('HTTP_URL')}}/{{$info->path}}" type="video/mp4">
         您的浏览器不支持 HTML5 video 标签。
     </video>
 </body>

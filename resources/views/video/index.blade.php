@@ -11,7 +11,7 @@
  @foreach($arr as $v)
      <p><a href="/video/details?vid={{$v->vid}}">{{$v->title}} </a>
      <video width="320" height="240" controls>
-         <source src="/storage/{{$v->path}}" type="video/mp4">
+         <source src="{{env('HTTP_URL')}}{{$v->path}}" type="video/mp4">
          您的浏览器不支持 HTML5 video 标签。
      </video>
      </p>

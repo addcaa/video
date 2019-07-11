@@ -25,11 +25,10 @@ class CronController extends Controller
             if ($v == '.' || $v == '..') {
                 continue;       //函数继续
             }
-            $arr = explode(',', $v);
             $local_file = $file_path . '/' . $v;
-            foreach ($arr as $vv) {
-                $file_name = Str::random(8) . '.' . substr(strrchr($vv, '.'), 1);
-                try {
+            $file_name = 'files/'.$v;
+//            print_r($file_name);
+            try {
                     $rs=$client->uploadFile($this->bucket,$file_name,$local_file);
                 } catch (OssException $e) {
                     printf(__FUNCTION__ . ": FAILED\n");
@@ -37,11 +36,8 @@ class CronController extends Controller
                     return;
                 }
                 unlink($local_file);
-            }
         }
     }
-
-
 }
 
 
