@@ -7,19 +7,20 @@ use App\Http\Controllers\Controller;
 use OSS\OssClient;
 class VideoController extends Controller
 {
-    //
-    public $AccessKeyID='LTAIMYSfOZoRbsK5';
-    public $AccessKeySecret='n2rCThxBXXyI9GvBQqg1JvSsl6rG8P';
-    public $bucket='1809video';
 
+    public function index(){
 
-    public function add(){
-        $client=new OssClient($this->AccessKeyID,$this->AccessKeySecret,env('ALY_OSS_EndPoint'));
-        $obg='cf.jpg';
-        $local_file='u=3353325373,4220782564&fm=26&gp=0.jpg';
-        $rs=$client->uploadFile($this->bucket,$obg,$local_file);
-        var_dump($rs);
     }
+
+
+
+
+
+
+
+
+
+
 
 
     public function weather(){

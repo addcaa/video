@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('video/add','Video\VideoController@add');
+Route::get('video/index','Video\VideoController@index');
 
 
 Route::get('weather/weather','Video\VideoController@weather');
