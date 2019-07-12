@@ -9,6 +9,7 @@
     <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"></script>
 </head>
 <body>
+
 <div class="prism-player" id="player-con"></div>
 <script>
     var player = new Aliplayer({
