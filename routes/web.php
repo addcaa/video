@@ -24,4 +24,4 @@ Route::get('/cron','Cron\CronController@cron');
 
 //oss时间通知
 Route::post('/notify/ossNotify','Oss\OssController@ossNotify');
-
+Route::get  ('/notify/add','Oss\OssController@add');
