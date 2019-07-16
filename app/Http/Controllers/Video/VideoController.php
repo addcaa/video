@@ -22,6 +22,17 @@ class VideoController extends Controller
         return view('video.details',['info'=>$info]);
     }
 
+    public function add(){
+        $DomainName="cdn.video.highyr.com";
+        $NotifyUrl="rtmp://push.video.highyr.com/cuifang/cuifang?auth_key=1562935011-0-0-1bcc50bb8f0b786c38e6b0ec1e69a60e";
+        echo $DomainName;
+        echo "<hr>";
+        echo $NotifyUrl;
+        $url="https://live.aliyuncs.com/?Action= SetLiveStreamsNotifyUrlConfig&DomainName=$DomainName&NotifyUrl=$NotifyUrl";
+        echo "<hr>";
+        echo $url;
+//        return view('video.add');
+    }
 
 
 
